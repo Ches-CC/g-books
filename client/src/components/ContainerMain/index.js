@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import SearchContainer from "../SearchContainer";
 
 class ContainerMain extends Component {
     
@@ -9,7 +8,6 @@ class ContainerMain extends Component {
         return (
             <div>
                 <div>
-                    <SearchContainer />                    
                 </div>
                 
             </div>

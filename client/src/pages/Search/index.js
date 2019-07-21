@@ -1,39 +1,19 @@
 import React, { Component } from "react";
+import Title from "../../components/Title";
 import ContainerMain from "../../components/SearchContainer";
-import API from "../../utils/API";
+import ContainerSecondary from "../../components/ContainerSecondary";
+import SearchContainer from "../../components/SearchContainer";
 
 class SearchPage extends Component {
-  state = {
-    books: [],
-    authors: [],
-    description: "",
-    image: "",
-    link: "",
-    title: ""
-  };
-
-  componentDidMount() {
-    this.loadBooks();
-    console.log(this.state.books);
-  }
-
-  loadBooks = () => {
-    API.getBooks().then(res => this.setState({ books: res.data }));
-  };
+  
 
   render() {
     return (
       <div>
-        <div>
-          {this.state.books.map(books => (
-            <div className="card" key={books._id}>
-              <p>Description</p>
-              <p>{books.description}</p>
-            </div>
-          ))}
-        </div>
-
+        <Title />
+        <SearchContainer />
         <ContainerMain />
+        <ContainerSecondary />
       </div>
     );
   }
