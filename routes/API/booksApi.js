@@ -15,7 +15,7 @@ router.route("/update")
     .post(booksController.update);
 
 // (CRU)D
-router.route("/remove")
+router.route("/remove/:id")
     .get(booksController.remove);
 
 module.exports = router;

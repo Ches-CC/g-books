@@ -4,13 +4,13 @@ export default {
     getBooks: function() {
         return axios.get("/api/books");
     },
-    updateBook: function() {
-        return axios.get("/api/books/update")
+    updateBook: function(updateBook) {
+        return axios.get("/api/books/update", updateBook)
     },
-    addBook: function() {
-        return axios.get("/api/books/add");
+    addBook: function(addBook) {
+        return axios.get("/api/books/add", addBook);
     },
-    removeBook: function() {
-        return axios.get("/api/books/remove");
+    removeBook: function(id) {
+        return axios.get("/api/books/remove/" + id);
     }
 };
