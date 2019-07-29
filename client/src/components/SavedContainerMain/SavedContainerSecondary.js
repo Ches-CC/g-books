@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import CardDisplay from "../CardDisplay";
 import API from "../../utils/API";
 
-class ContainerSecondary extends Component {
+class SavedContainerSecondary extends Component {
   state = {
     books: [],
     authors: [],
@@ -47,4 +47,4 @@ class ContainerSecondary extends Component {
   }
 }
 
-export default ContainerSecondary;
+export default SavedContainerSecondary;
